@@ -1,3 +1,5 @@
+package com.example.myapplication
+
 /**
  * You can edit, run, and share this code.
  * play.kotlinlang.org
@@ -39,10 +41,10 @@ fun main() {
 
                 if(account != null) {
                     print("Monto: ")
-                    val amount = readln().toDouble()
+                    val amount = readLine()!!.toDouble()
                     account.addMoney(amount)
                 } else {
-                    println("\nNumero de cuenta incorrecto")
+                    println("Numero de cuenta incorrecto")
                 }
 
             }
@@ -53,7 +55,7 @@ fun main() {
 
                 if(account != null) {
                     println("Monto: ")
-                    val amount = readln().toDouble()
+                    val amount = readLine()!!.toDouble()
                     account.removeMoney(amount)
                 } else {
                     println("\nNumero de cuenta incorrecto")
@@ -84,6 +86,9 @@ fun main() {
             }
             6 -> {
                 restart = false
+            }
+            else -> {
+                println("\nLa selección no existe dentro del menú")
             }
         }
 
